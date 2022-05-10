@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --blue-500: #3B82F6;
+    --yellow-400: #FACC15;
+    --grey-300: #dde2eb;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    /* gap: 5px; */
+}
+
+.header {
+    background-color: white;
+    padding: 15px 40px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+    position: relative;
+    /* useful to show shadow for a grid element */
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+}
+
+.content {
+    color: black;
+    background-color: var(--grey-300);
+    display: grid;
+    grid-template-columns: auto;
+    gap: 15px;
+    padding: 15px;
+}
+
+.main-content {
+    font-size: 0.9rem;
+}
+
+.section-title {
+    font-weight: bold;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.book-card {
+    background-color: white;
+    color: grey;
+    min-height: 180px;
+    border-radius: 10px;
+    padding: 30px;
+    border-left: 11px solid var(--yellow-400);
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.title {
+    font-weight: bold;
+    color: black;
+}
+
+.section-title {
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.action-block {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+    justify-content: start;
+    align-items: center;
+}
+
+.header button {
+    background-color: var(--blue-500);
+    color: white;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 25px;
+    /*cursor: pointer*/
+}
