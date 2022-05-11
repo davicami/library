@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+    <title>Library</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Library</h1>
+            <div class="action-block">
+                <button id="addBookBtn">Add</button>
+            </div>
+
+            <div class="modal" id="addBookModal">
+                <form class="add-book-form" id="addBookForm">
+                    <h3>Add new book</h3>
+                    <input class="input" type="text" id="title" placeholder="Title" required maxlength="100" />
+                    <p class="error-msg" id="errorMsg"></p>
+                    <input class="input" type="text" id="author" placeholder="Author" required maxlength="100" />
+                    <input class="input" type="number" id="pages" placeholder="Pages" required max="10000" />
+                    <div class="is-read">
+                        <label for="is-read">Have you read it?</label>
+                        <input class="checkbox" type="checkbox" id="isRead" />
+                    </div>
+                    <button class="btn btn-light-green" type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="overlay" id="overlay"></div>
+
+        </div>
+        <div class="content">
+            <div class="main-content">
+                <p class="section-title">Projects</p>
+                <div id="books-grid" class="books-grid">
+                    <div class="book-card">
+                        <p class="title">Article Title</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                    </div>
+                    <div class="book-card">
+                        <p class="title">Article Title</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
