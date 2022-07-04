@@ -109,7 +109,7 @@ button {
     z-index: 1;
     top: 50%;
     left: 50%;
-    width: 300px;
+    width: 600px;
     padding: 15px;
     border-radius: 10px;
     background-color: white;
@@ -145,7 +145,7 @@ button {
 }
 
 .input {
-    width: 100%;
+    width: 300px;
     padding: 10px;
     border-radius: var(--border-radius);
 }
@@ -174,4 +174,31 @@ button {
 
 .overlay.active {
     display: block;
+}
+
+/* This is our style for the invalid fields */
+input:invalid {
+    border-color: #900;
+    background-color: #FDD;
+}
+
+input:focus:invalid {
+    outline: none;
+}
+
+/* This is the style of our error messages */
+.error {
+    width: 100%;
+    padding: 0;
+
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+
+    box-sizing: border-box;
+}
+
+.error.active {
+    padding: 0.3em;
 }

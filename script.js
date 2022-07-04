@@ -88,8 +88,28 @@ const createBookCard = (book) => {
     booksGrid.appendChild(bookCard)
 }
 
+
+const setAddBookFormValidations = () => {
+    const title = document.getElementById('title');
+
+    console.log("inside validations");
+    title.addEventListener("input", function (event) {
+        if (title.validity.typeMismatch) {
+            title.setCustomValidity("Mi aspetto un indirizzo non vuotoo!!!");
+            title.reportValidity();
+        } else if (title.validity.valueMissing) {
+            console.log("non vuoto mi aspetto io eh");
+            title.setCustomValidity("Mi aspetto un indirizzo non vuotoo!!!");
+        } else {
+            console.log("caso boh aposto direi");
+            title.setCustomValidity("");
+        }
+    });
+}
+
 const preparePage = () => {
     updateBooksGrid();
+    setAddBookFormValidations();
 }
 
 const openAddBookModal = () => {

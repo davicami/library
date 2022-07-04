@@ -21,8 +21,11 @@
             <div class="modal" id="addBookModal">
                 <form class="add-book-form" id="addBookForm">
                     <h3>Add new book</h3>
-                    <input class="input" type="text" id="title" placeholder="Title" required maxlength="100" />
-                    <p class="error-msg" id="errorMsg"></p>
+                    <label for="title">
+                        <span>Title:</span>
+                        <input class="input" type="text" id="title" placeholder="Title" required maxlength="100" />
+                        <span class="error" id="titleError"></span>
+                    </label>
                     <input class="input" type="text" id="author" placeholder="Author" required maxlength="100" />
                     <input class="input" type="number" id="pages" placeholder="Pages" required max="10000" />
                     <div class="is-read">
@@ -37,7 +40,7 @@
         </div>
         <div class="content">
             <div class="main-content">
-                <p class="section-title">Projects</p>
+                <p class="section-title">Books</p>
                 <div id="books-grid" class="books-grid">
                     <div class="book-card">
                         <p class="title">Article Title</p>
